@@ -55,6 +55,7 @@ class Filtering extends Component<
               w="50px"
               m="auto"
               p="8px 0"
+              cursor="pointer"
               onClick={this.HandleResultFilter.bind(this)}
             >
               <center>
