@@ -1,0 +1,8 @@
+- Fetch API | Video References (https://www.youtube.com/watch?v=zR5FoKMAJp4&pp=ygUNRmV0Y2ggQVBJIFRTWA%3D%3D) 
+- State | Video References (https://www.youtube.com/watch?v=21-VMTmiV8E&pp=ygUccmVhY3Qgc3RhdGUgdHlwZXNjcmlwdCBjbGFzcw%3D%3D) 
+- Lifecycle | Video Reference (Coming Soon)
+- Event Handle | Video Reference
+ (https://www.youtube.com/watch?v=xNSIHFi8o2M)
+- Axios | Video Reference (https://www.youtube.com/watch?v=_8YaUjcL0sw&pp=ygUWcmVhY3QgdHlwZXNjcmlwdCBheGlvcw%3D%3D)
+
+https://github.com/adhxabre/paslon-frontend
