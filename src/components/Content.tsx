@@ -1,5 +1,7 @@
 import { Component } from "react";
 // import data from "../data/data";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   SimpleGrid,
   Box,
@@ -35,6 +37,7 @@ class Content extends Component<{ values?: object }, State> {
 
   componentDidMount() {
     this.FetchingData();
+    AOS.init();
   }
 
   FetchingData() {
@@ -64,7 +67,13 @@ class Content extends Component<{ values?: object }, State> {
             <>
               {this.state.dataContent?.map((item, index) => {
                 return (
-                  <Box border="1px solid black" borderRadius={8} key={index}>
+                  <Box
+                    border="1px solid black"
+                    borderRadius={8}
+                    key={index}
+                    data-aos="fade-up"
+                    data-aos-duration="3000"
+                  >
                     <Box
                       position="absolute"
                       bg="purple.600"
