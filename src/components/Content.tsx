@@ -2,6 +2,8 @@ import { Component } from "react";
 // import data from "../data/data";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import LazyLoad from "react-lazy-load";
+import axios from "axios";
 import {
   SimpleGrid,
   Box,
@@ -41,14 +43,23 @@ class Content extends Component<{ values?: object }, State> {
   }
 
   FetchingData() {
-    fetch("https://api.npoint.io/624c99ed50dcd45fb160")
-      .then((res) => res.json())
+    // FETCH
+    // fetch("https://api.npoint.io/624c99ed50dcd45fb160")
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     this.setState({ dataContent: data, isLoading: false });
+    //   })
+    //   .catch((error) => {
+    //     console.log(`Fetching Error ${error}`);
+    //   });
+
+    // AXIOS
+    axios
+      .get("https://api.npoint.io/624c99ed50dcd45fb160")
       .then((data) => {
-        this.setState({ dataContent: data, isLoading: false });
+        this.setState({ dataContent: data.data, isLoading: false });
       })
-      .catch((error) => {
-        console.log(`Fetching Error ${error}`);
-      });
+      .catch((error) => console.log(`Error: ${error}`));
   }
 
   render() {
@@ -84,6 +95,7 @@ class Content extends Component<{ values?: object }, State> {
                       <Text color="white">{item.badge}</Text>
                     </Box>
                     <Image
+                      loading="lazy"
                       src={item.imageUrl}
                       alt={item.name}
                       objectFit="cover"
